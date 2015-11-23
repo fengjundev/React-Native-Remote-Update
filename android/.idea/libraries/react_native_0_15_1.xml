@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="react-native-0.15.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.15.1/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.15.1/jars/libs/infer-annotations-1.5.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.15.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Environment/gradle-2.8/caches/modules-2/files-2.1/com.facebook.react/react-native/0.15.1/bc0a378c5b20ce114b99dce915ead6a781f83c3a/react-native-0.15.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
