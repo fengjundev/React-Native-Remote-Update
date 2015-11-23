@@ -34,7 +34,7 @@ public class BaseReactActivity extends Activity implements DefaultHardwareBackBt
 
     private static final String TAG = "BaseReactActivity";
 
-    public static final String JS_BUNDLE_REMOTE_URL = "http://172.18.16.43:8080/download/index.android.bundle";
+    public static final String JS_BUNDLE_REMOTE_URL = "https://raw.githubusercontent.com/fengjundev/React-Native-Remote-Update/master/remote/index.android.bundle";
     public static final String JS_BUNDLE_LOCAL_FILE = "index.android.bundle";
     public static final String JS_BUNDLE_LOCAL_PATH = Environment.getExternalStorageDirectory().toString() + File.separator + JS_BUNDLE_LOCAL_FILE;
 
