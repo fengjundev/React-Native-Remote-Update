@@ -1,6 +1,5 @@
 # 使用React-Native实现app热部署的一次实践
 
-> 随着React Native for Android 发布，React基本完成了对多端的支持。基于React Native的一大优势就是实现app的动态部署，本demo是使用React Native实现热部署的一次实践。
 
 ## 效果
 
@@ -29,9 +28,7 @@ demo中执行热部署的实现流程如下：
 为了在运行中重新加载bundle文件，查看`ReactInstanceManager`的源码，找到如下方法：
 
 ```java
-  private void recreateReactContextInBackground(
-      JavaScriptExecutor jsExecutor,
-      JSBundleLoader jsBundleLoader) {
+  private void recreateReactContextInBackground(JavaScriptExecutor jsExecutor, JSBundleLoader jsBundleLoader) {
     UiThreadUtil.assertOnUiThread();
 
     ReactContextInitParams initParams = new ReactContextInitParams(jsExecutor, jsBundleLoader);
