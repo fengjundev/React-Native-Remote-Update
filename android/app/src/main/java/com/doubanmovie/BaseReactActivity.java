@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.widget.Toast;
 
 import com.facebook.react.LifecycleState;
 import com.facebook.react.ReactInstanceManager;
@@ -96,6 +97,8 @@ public class BaseReactActivity extends Activity implements DefaultHardwareBackBt
             return;
         }
 
+        //Toast.makeText(BaseReactActivity.this, "Start downloading update", Toast.LENGTH_SHORT).show();
+
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(JS_BUNDLE_REMOTE_URL));
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
         request.setDestinationUri(Uri.parse("file://" + JS_BUNDLE_LOCAL_PATH));
@@ -124,6 +127,8 @@ public class BaseReactActivity extends Activity implements DefaultHardwareBackBt
         }
 
         Log.i(TAG, "download success, reload js bundle");
+
+        Toast.makeText(BaseReactActivity.this, "Downloading complete", Toast.LENGTH_SHORT).show();
         try {
             Class<?> RIManagerClazz = mReactInstanceManager.getClass();
             Method method = RIManagerClazz.getDeclaredMethod("recreateReactContextInBackground",
@@ -185,6 +190,6 @@ public class BaseReactActivity extends Activity implements DefaultHardwareBackBt
                     finish();
                 }
             });
-        }
+    }
     }
 }
